@@ -1,0 +1,546 @@
+
+:root{
+    --yellow:#f9ca24;
+}
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+*::selection{
+    background: var(--yellow);
+    color: rgb(77, 77, 77);
+}
+html{
+    scroll-behavior: smooth;
+}
+/* adding scrollbar effect */
+html::-webkit-scrollbar{
+    width: 1.2rem;
+}
+html::-webkit-scrollbar-track{
+    background-color: #222;
+}
+html::-webkit-scrollbar-thumb{
+    background-color: var(--yellow);
+}
+body{
+    background-color: #111;
+    background: url(images/abstract-dark-twisted-tunnel-constructed-with-star-shape.jpg) no-repeat center center;
+    background-attachment: fixed;
+    
+}
+
+header{
+    color: white;
+    position: fixed;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 30%;
+    background-color: rgb(37, 37, 37);
+    text-align: center;
+    z-index: 5000;
+}
+
+header ul li{
+    list-style-type:none;
+    /* padding: 10px;
+    margin: 10px;
+    background: rgb(66, 66, 66);
+    width: 20rem;
+    border-radius: 10px; */
+}
+.navactive a{
+    color: black;
+    background: var(--yellow);
+    font-weight: 950;
+}
+header img{
+    width: 200px;
+    border-radius: 50%;
+    border: 7px solid var(--yellow);
+}
+header ul li a{
+    display: block;
+    cursor: pointer;
+    color: white;
+    width: 15rem;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    background: rgb(66, 66, 66);
+}
+header ul li:hover a{
+    color: var(--yellow);
+    cursor: pointer;
+    background: rgb(26, 26, 26);
+}
+.menubar{
+    position: fixed;
+    right: 2.5rem;
+    top: 2rem;
+    color: var(--yellow);
+    display: none;
+    z-index: 2000;
+}
+@media only screen and (max-width:1200px){
+    .menubar{
+        display: block;
+    }
+    header{
+        left: -120%;
+        width: 20rem;
+        font-size: 16px;
+    }
+    .addclass{
+        left: 0%;
+    }
+    header ul li a{
+        width: 17rem;
+    }
+    header img{
+        width: 11rem;
+    }
+    
+}
+@media only screen and (max-width:700px){
+    header{
+        width: 20rem;
+        font-size: 14px;
+    }
+    header ul li a{
+        width: 15rem;
+    }
+    header img{
+        width: 10rem;
+    }
+    
+}
+
+body #home{
+    height: 100vh;
+    position: relative;
+    color: white;
+}
+.home-name{
+    position: absolute;
+    right: 0;
+    width: 65%;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 25px;
+}
+.home-name h1{
+    margin: 3px;
+    font-size: 38px;
+    color: var(--yellow);
+}
+.home-name h1 span{
+    
+    color: white;
+}
+.home-name h2{
+    margin: 3px;
+    font-size: 25px;
+}
+.home-name p{
+    font-size: 18px;
+}
+
+@media only screen and (max-width:1200px) {
+    .home-name{
+        width: 100%;
+        text-align: center;
+    }
+    .home-name h1{
+        font-size: 32px;
+    }
+    .home-name h1{
+        font-size: 25px;
+    }
+    .home-name p{
+        font-size: 15px;
+        width: 80%;
+        margin: auto;
+        padding: 6px;
+    }
+    
+}
+ body #about{
+    height: 100vh;
+    position: relative;
+}
+.content{
+    position: absolute;
+    right: 0px;
+    width: 70%;
+    top: 50%;
+    transform: translateY(-50%);
+    
+}
+.content .items{
+    background-color:var(--yellow);
+    width: 80%;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+}
+.content button{
+    
+    margin: 14px auto;
+    display: block;
+    padding: 9px;
+    border-radius: 7px;
+    background: rgb(46, 46, 46);
+    color: var(--yellow);
+    border:1px solid var(--yellow);
+    font-size: 18px;
+    cursor: pointer;
+}
+.content button:hover{
+    border:none;
+    background:var(--yellow);
+    border:1px solid rgb(46, 46, 46);
+    color: black;
+}
+.content .ml{
+    display: flex;
+}
+.ml{
+    width: 80%;
+    margin: auto;
+    justify-content: space-around;
+    align-items: center;
+}
+.ml ul li{
+    color: white;
+    padding: 6px;
+    list-style-type: none;
+    display: block;
+
+}
+.ml ul li i{
+    font-size: 12px;
+    color: var(--yellow);
+    margin-right: 5px;
+}
+.aboutme{
+    z-index: 4000;
+    text-align: center;
+    font-size: 30px;
+    padding: 6px;
+    color: var(--yellow);
+    border-bottom: 1px solid white;
+    width: 80%;
+    margin: auto;
+    
+}
+.aboutme h1 span{
+    color: white;
+}
+@media only screen and (max-width:1200px)
+{
+    .content{
+        width: 100%;
+        text-align: center;
+    }
+    .aboutme{
+        font-size: 25px;
+    }
+}
+@media only screen and (max-width:1200px)
+{
+    .content .items{
+        font-size: 15px;
+        padding: 12px;
+        width: 73%;
+    }
+    .content .ml{
+        flex-flow: column;
+        text-align: left;
+    }
+    .content ul li{
+        width: 180px;
+        margin: auto;
+    }
+    .content a {
+        display: block;
+        margin-top: 18px;
+        margin-bottom: 20%;
+    }
+
+    
+}
+body #projects{
+    height: 120vh;
+    position: relative;
+    width: 100%;
+}
+
+.procontent{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 70%;
+}
+.procontent .title{
+    
+    margin: auto;
+    text-align: center;
+    color: var(--yellow);
+    font-size:30px ;
+    border-bottom: 1px solid white;
+    width: 80%;
+}
+.works{
+    width: 80%;
+    margin:auto;
+}
+.works .col1{
+    width: 70%;
+}
+.works td{
+    padding: 10px;
+}
+.on h2{
+    font-size: 28px;
+    padding: 10px;
+    color: white;
+    margin: 30px;
+    
+}
+#s{
+    width: 80%;
+    margin: 30px auto;
+}
+#projects table{
+    color: white;
+}
+.on .ongng{
+    width: 80%;
+    margin: auto;
+}
+.ongng td{
+    padding: 10px;
+}
+#projects i{
+    margin-right: 9px;
+    color: var(--yellow);
+    font-size:18px ;
+}
+#projects td{
+    font-size: 20px;
+}
+#projects a{
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: var(--yellow);
+    padding: 3px;
+    color: black;
+    border-radius: 9px;
+    border: 1px solid black;
+}
+#projects a:hover{
+  
+    background-color: rgb(36, 36, 36);
+  
+    color: var(--yellow);
+
+    border: 1px solid var(--yellow);
+}
+#projects .ptag{
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+    color: gray;
+}
+@media only screen and (max-width:1200px)
+{
+    .procontent{
+        width:100%;
+    }
+    .some, .onh{
+        text-align: center;
+        font-size: 20px;
+    }
+    .procontent .title{
+        font-size: 25px;
+    }
+    #projects td{
+        font-size: 16px;
+    }
+}
+#contact{
+    height: 100vh;
+    position: relative;
+}
+.contactcon{
+    position: absolute;
+    width: 70%;
+    top: 0px;
+    right: 0px;
+    color: white;
+    z-index: 1000;
+    
+}
+.titlecon{
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-weight: 1000;
+    width: 80%;
+    margin: auto;
+}
+.info{
+    width: 80%;
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+}
+.map{
+    flex-basis: 40%;
+}
+.form{
+    flex-basis: 55%;
+    width: 100%;
+}
+.map iframe{
+    display: block;
+    width: 100%;
+    border-radius: 15px;
+    
+}
+.rows{
+    display: flex;
+    justify-content: space-between;
+}
+label{
+    display: block;
+    margin: 20px 10px;
+    font-size: 18px;
+
+}
+textarea{
+    width: 100%;
+}
+input,textarea{
+    display: block;
+    outline: none;
+    background: transparent;
+    margin-left: 10px;
+    border: none;
+    border-bottom: 2px solid rgb(61, 61, 61);
+    color: var(--yellow);
+    width: 100%;
+}
+
+
+input:focus,textarea:focus{
+    border-bottom: 2px solid var(--yellow);  
+}
+.row1,.row2{
+    flex-basis: 45%;
+}
+.submit{
+    width: 100%;
+    text-align: center;
+    margin-top:20px
+}
+.submit button{
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 10px;
+    outline: none;
+    border:2px solid var(--yellow);
+    background: rgb(43, 43, 43);
+    color: var(--yellow);
+}
+.submit button:hover{
+    color: black;
+    background: var(--yellow);
+    cursor: pointer;
+}
+#contact span{
+    color:var(--yellow);
+    
+}
+
+@media only screen and (max-width:1200px)
+{
+    .contactcon{
+        width: 100%;
+    }
+    .info{
+        flex-flow: column;
+    }
+    .rows{
+        flex-flow: column;
+    }
+    .form{
+        margin:40px ;
+        padding: 20px;
+    }
+    
+}
+.connect{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    font-size:20px ;
+    margin-top: 6px;
+    margin-bottom: 15px;
+}
+.connect a i{
+    color:var(--yellow);
+    padding: 3px;
+    margin: 2px;
+}
+@media only screen and (max-width:1200px)
+{
+    .connect{
+        margin-top: 0px;
+    }
+    
+}
+#home .tech{
+    margin-top: 16px;
+    font-size: 27px;
+}
+#si{
+    font-size: 27px;
+}
+.si{
+    color: var(--yellow);
+    font-size: 27px;
+}
+@media only screen and (max-width:1200px)
+{
+    #si,.si,#tech{
+        font-size:19px ;
+    }
+}
+#preloader{
+    position: fixed;
+    background: #000 url("images/Neon-Loading.gif") no-repeat center center;
+    height: 100vh;
+    width: 100%;
+    z-index: 10000;
+    background-size: 50%;
+}
+@media only screen and (max-width:1200px){
+    #preloader{
+        background-size: 80%;
+    }
+}
